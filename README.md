@@ -1,5 +1,8 @@
 # 這裡是存放 Xuemi 作業的位置
 
+## CSS 動畫練習
+[連結](https://i958047527992.github.io/xuemiscsshw/CSS%E5%8B%95%E7%95%AB%E7%B7%B4%E7%BF%92/)
+
 ## 圖片放置練習
 [project1](https://i958047527992.github.io/xuemiscsshw/%E5%9C%96%E7%89%87%E6%94%BE%E7%BD%AE%E7%B7%B4%E7%BF%92/project_1/)
 <br>
