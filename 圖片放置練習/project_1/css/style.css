@@ -1,0 +1,102 @@
+/* ----------------- *\
+        Global 
+\* ----------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+/* image tag */
+.img_container {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.img_container img {
+  width: 100%;
+}
+
+/* background(cover) */
+.bg_img {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #000;
+  background-image: url(../img/potrait.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* logo */
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 120px;
+  height: 48px;
+  border: 1px solid #000;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+.logo2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 120px;
+  height: 48px;
+  border: 1px solid #000;
+}
+
+.logo2 img {
+  width: 100%;
+}
+
+/* frame */
+.outter {
+  width: 50%;
+  /* border: 1px solid rgb(4, 0, 255); */
+}
+
+.fm_img_container {
+  width: 100%;
+  /* border: 5px solid #000; */
+}
+
+.fm_img_container::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  /* border: 5px solid rgb(51, 255, 0); */
+}
+
+.fm_img_container .image {
+  /* border: 1px solid rgb(255, 0, 0); */
+  background-image: url(../img/potrait.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fm_img_container.ratio_1-1::before {
+  padding-top: 100%;
+}
+
+.fm_img_container.ratio_2-3::before {
+  padding-top: 150%;
+}
+
+.fm_img_container.ratio_16-9::before {
+  padding-top: 56.25%;
+}
+/*# sourceMappingURL=style.css.map */

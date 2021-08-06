@@ -1,0 +1,101 @@
+/* ----------------- *\
+        global 
+\* ----------------- */
+
+* {
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* ----------------- *\
+      layout 
+\* ----------------- */
+
+@mixin containerSetting {
+	display: block;
+	@include blackBorder();
+	height: 100%;
+}
+
+@mixin blackBorder {
+	border: 1px solid #000;
+}
+
+@mixin colSetting {
+	padding: 0;
+	float: left;
+	border: 1px solid rgb(255, 0, 0);
+	padding: 0 16px;
+}
+/* container */
+.container {
+	width: 992px;
+	margin: 0 auto;
+	@include containerSetting();
+	&_fluid {
+		@include containerSetting();
+		width: 100%;
+	}
+}
+/* grid */
+.row {
+	@include blackBorder();
+	margin: 0 -16px;
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+	&_collapse {
+		margin: 0;
+	}
+}
+
+.col {
+	/* 表示 12 分隔 4 份 : 3分之1 */
+	/* 表示 12 分隔 6 份 : 2分之1 */
+	&_4 {
+		@include colSetting();
+		width: 33.333333%;
+	}
+	&_6 {
+		@include colSetting();
+		width: 50%;
+	}
+}
+
+/* ----------------- *\
+      component 
+\* ----------------- */
+
+/* navber */
+.navbar {
+	height: 64px;
+	background-color: #cccccc;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+}
+/* jumbotron */
+.jumbotron {
+	height: 640px;
+	background-color: purple;
+}
+/* hero */
+.hero {
+	padding: 80px 0;
+	@include blackBorder();
+}
+/* card */
+.card {
+	background-color: pink;
+	height: 300px;
+}
+.comp_1 {
+	margin-bottom: 80px;
+}
+/* footer */
+footer {
+	height: 160px;
+	background-color: purple;
+}

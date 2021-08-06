@@ -1,0 +1,109 @@
+/* ----------------- *\
+        global 
+\* ----------------- */
+* {
+	box-sizing: border-box;
+	position: relative;
+}
+h1,
+p {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+html,
+body {
+	height: 100%;
+	font-family: "思源黑體";
+}
+.wrapper {
+	height: 100%;
+	background-color: #eee;
+}
+/* image container */
+$hotelImageUrl: url(../img/hotel.jpg);
+.image_container {
+	/* border: 1px solid #000; */
+	width: 100%;
+	overflow: hidden;
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		padding-bottom: 75%;
+		/* border: 1px solid rgb(255, 0, 0)250, 20, 20); */
+	}
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: $hotelImageUrl;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+/* product */
+$pinkColor: #ff7878;
+.product {
+	width: 300px;
+	/* border: 1px solid #000; */
+	background-color: #fff;
+	box-shadow: 0 8px 36px rgba(0, 0, 0, .3);
+	border-radius: 4px;
+	overflow: hidden;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	transition: box-shadow .2s;
+	.info {
+		padding: 16px;
+		.name {
+			font-size: 22px;
+			margin-bottom: 16px;
+		}
+		.para {
+			font-size: 14px;
+			line-height: 18px;
+			text-align: justify;
+			margin-bottom: 16px;
+		}
+		.price {
+			font-size: 16px;
+			text-align: right;
+			color: $pinkColor;
+			font-weight: 600;
+		}
+	}
+	.tag {
+		background-color: $pinkColor;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 500;
+		padding: 2px 4px;
+		border-radius: 4px;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+	}
+
+	/* 微互動 */
+	&:hover {
+		box-shadow: 0 16px 72px rgba(0, 0, 0, .3);
+		.image_container .image {
+			transform: scale(1.2);
+		}
+	}
+	.image_container .image {
+		transition: transform .5s;
+	}
+}

@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	position: relative;
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+}
+
+$light-blue: rgb(65, 174, 224);
+$dark-blue: rgb(27, 73, 95);
+
+@mixin borderWithLightblue {
+	border: 1px solid #000;
+	background: $light-blue;
+}
+@mixin colSetting {
+	border: 1px solid rgb(255, 255, 255);
+	background: $dark-blue;
+	padding: 0 16px 0;
+}
+/* inline-block */
+.row {
+	@include borderWithLightblue();
+}
+.col {
+	width: 33.333333%;
+	display: inline-block;
+	vertical-align: top;
+	@include colSetting();
+}
+
+/* float */
+.float {
+	&_row {
+		@include borderWithLightblue();
+		&::after {
+			content: " ";
+			display: block;
+			clear: both;
+		}
+	}
+	&_col {
+		@include colSetting();
+		width: 33.333333%;
+		float: left;
+	}
+}
+.clearfix {
+	clear: both;
+}
+
+/* flex */
+.flex {
+	&_row {
+		@include borderWithLightblue();
+		display: flex;
+		/* justify-content: space-between; */
+		justify-content: space-around;
+		/* justify-content: flex-start; */
+		/* justify-content: flex-end; */
+		flex-wrap: wrap;
+		// & {
+		// 	@for $i from 1 through 4 {
+		// 		@if $i == 1 {
+		// 			.flex_col_#{$i} {
+		// 				width: 200px;
+		// 			}
+		// 		} @else {
+		// 			.flex_col_#{$i} {
+		// 				flex: $i - 1;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+	&_col {
+		@include colSetting();
+		width: 50%;
+		/* width: 200px; */
+	}
+}
+
+.footer {
+	height: 100px;
+	background-color: darkgray;
+}
+
+/* card */
+.card {
+	height: 300px;
+	width: 100%;
+	background: rgb(245, 60, 121);
+}

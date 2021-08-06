@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* ----------------- *\
+        global 
+\* ----------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+/* ----------------- *\
+      layout 
+\* ----------------- */
+/* container */
+.container {
+  width: 992px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #000;
+  height: 100%;
+}
+
+.container_fluid {
+  display: block;
+  border: 1px solid #000;
+  height: 100%;
+  width: 100%;
+}
+
+/* grid */
+.row {
+  border: 1px solid #000;
+  margin: 0 -16px;
+}
+
+.row::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.row_collapse {
+  margin: 0;
+}
+
+.col {
+  /* 表示 12 分隔 4 份 : 3分之1 */
+  /* 表示 12 分隔 6 份 : 2分之1 */
+}
+
+.col_4 {
+  padding: 0;
+  float: left;
+  border: 1px solid red;
+  padding: 0 16px;
+  width: 33.333333%;
+}
+
+.col_6 {
+  padding: 0;
+  float: left;
+  border: 1px solid red;
+  padding: 0 16px;
+  width: 50%;
+}
+
+/* ----------------- *\
+      component 
+\* ----------------- */
+/* navber */
+.navbar {
+  height: 64px;
+  background-color: #cccccc;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+/* jumbotron */
+.jumbotron {
+  height: 640px;
+  background-color: purple;
+}
+
+/* hero */
+.hero {
+  padding: 80px 0;
+  border: 1px solid #000;
+}
+
+/* card */
+.card {
+  background-color: pink;
+  height: 300px;
+}
+
+.comp_1 {
+  margin-bottom: 80px;
+}
+
+/* footer */
+footer {
+  height: 160px;
+  background-color: purple;
+}
+/*# sourceMappingURL=style.css.map */

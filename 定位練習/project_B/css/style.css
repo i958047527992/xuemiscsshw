@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.wrapper {
+  border: 2px solid #000000;
+  height: 600px;
+  position: relative;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /*變形屬性*/
+  /*transform: translate(100px,100px);
+  */
+  /*transform: translate(100%,100%);
+  */
+  /*transform: translateX(100px) translateY(100px);
+  */
+  /*transform: rotate(45deg);
+  */
+  /*transform: skew(45deg);
+  */
+  /*transform: scale(2);
+  */
+  /*position*/
+  /*position: absolute;
+  left: 100px;
+  top: 100px;
+  */
+  /*置中變化*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

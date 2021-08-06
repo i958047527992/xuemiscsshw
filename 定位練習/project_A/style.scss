@@ -1,0 +1,48 @@
+$post-bg-color: #ccc;
+$relative-bg-color: #915858;
+$static-bg-color: rgb(127, 185, 120);
+$absolute-bg-color: rgb(27, 129, 212);
+$fixed-bg-color: rgb(90, 92, 12);
+
+@mixin squareWidthHeight($num) {
+	width: #{$num}px;
+	height: #{$num}px;
+}
+
+.post {
+	@include squareWidthHeight(300);
+	background-color: $post-bg-color;
+	font-size: 48px;
+}
+/* 依照原本的自己的位置去做定位 */
+.relative {
+	background-color: $relative-bg-color;
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+/* 預設設定 */
+.static {
+	background-color: $static-bg-color;
+	position: static;
+	top: 100px; /* 無作用 */
+}
+/* 找上層元素 可被定為的元素（參考點），要滿足： absolute、relative、fixed */
+.absolute {
+	background-color: $absolute-bg-color;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.outter {
+	@include squareWidthHeight(500);
+	border: 5px solid #000000;
+	position: relative;
+}
+/* 找視窗定位 */
+.fixed {
+	background-color: $fixed-bg-color;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
